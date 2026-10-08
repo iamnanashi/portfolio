@@ -159,6 +159,9 @@ export default function ScrollyHero() {
     return () => window.removeEventListener("scroll", onMobileScroll);
   }, [isDesktop]);
 
+  const [isWaving, setIsWaving] = useState(false);
+  const lastWavingRef = useRef(false);
+
   // Play audio cue when user reaches waving frame
   useEffect(() => {
     const currentProg = isDesktop ? localProg : targetFrameRef.current / (TOTAL_FRAMES - 1);
@@ -196,6 +199,12 @@ export default function ScrollyHero() {
       if (idx !== lastDrawn) {
         lastDrawn = idx;
         renderFrame(idx);
+
+        const wavingNow = idx >= 135;
+        if (wavingNow !== lastWavingRef.current) {
+          lastWavingRef.current = wavingNow;
+          setIsWaving(wavingNow);
+        }
       }
 
       animId = requestAnimationFrame(loop);
@@ -209,7 +218,7 @@ export default function ScrollyHero() {
     <section
       id="scrolly-greeting"
       ref={sectionRef}
-      className={`relative w-full shrink-0 bg-[#050505] selection:bg-[#ffff00] selection:text-black ${
+      className={`relative w-full shrink-0 bg-[#050505] selection:bg-[#ffff33] selection:text-black ${
         isDesktop
           ? "lg:w-screen lg:h-screen overflow-hidden border-x border-white/[0.06] flex flex-col items-center justify-center"
           : "h-[180vh]"
@@ -237,6 +246,47 @@ export default function ScrollyHero() {
 
         {/* Scanlines */}
         <div className="pointer-events-none absolute inset-0 z-10 opacity-15 scanline" />
+
+        {/* Interactive Avatar Speech Greeting */}
+        <div
+          className={`absolute z-20 pointer-events-none transition-all duration-500 ease-out ${
+            isWaving
+              ? "opacity-100 scale-100 translate-y-0"
+              : "opacity-0 scale-90 translate-y-4"
+          } top-16 sm:top-20 lg:top-24 left-1/2 -translate-x-1/2 lg:left-auto lg:right-[10%] xl:right-[14%] lg:translate-x-0 w-[92vw] max-w-[360px] sm:max-w-md`}
+        >
+          <div className="relative p-4 sm:p-5 curtis-notch bg-[#050505]/90 backdrop-blur-md border border-[#ffff33]/60 shadow-[0_20px_50px_rgba(0,0,0,0.95),0_0_30px_rgba(255,255,51,0.2)] text-left">
+            {/* Authentic Curtis notched corners */}
+            <span className="absolute -top-0.5 -left-0.5 w-2 h-2 border-t-2 border-l-2 border-[#ffff33]" />
+            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 border-t-2 border-r-2 border-[#ffff33]" />
+            <span className="absolute -bottom-0.5 -left-0.5 w-2 h-2 border-b-2 border-l-2 border-[#ffff33]" />
+            <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 border-b-2 border-r-2 border-[#ffff33]" />
+
+            {/* Header badge */}
+            <div className="flex items-center justify-between gap-3 mb-2 font-mono text-[10px] sm:text-xs text-[#ffff33] tracking-widest font-black uppercase">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#ffff33] animate-ping" />
+                <span>SHIVANG // LIVE GREETING</span>
+              </span>
+              <span className="text-white/40 text-[9px] font-mono">TRANSMISSION</span>
+            </div>
+
+            {/* Exact dialogue words requested by user */}
+            <h2 className="text-xl sm:text-2xl font-black font-mono tracking-tight text-white mb-1.5 leading-snug">
+              &ldquo;Hi! Good to see you here!&rdquo;
+            </h2>
+
+            {/* Subtitle */}
+            <p className="text-xs sm:text-sm font-sans text-white/75 leading-relaxed">
+              Glad you stopped by &mdash; keep scrolling to explore enterprise systems, AI architecture &amp; core capabilities.
+            </p>
+
+            {/* Speech bubble beak on desktop pointing towards Shivang */}
+            <div
+              className="hidden lg:block absolute -left-2.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-[#050505] border-l border-b border-[#ffff33]/60 rotate-45"
+            />
+          </div>
+        </div>
 
         {/* Subtle Bouncing Scroll Guidance Indicator */}
         <div className="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none">

@@ -94,7 +94,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       row: 1,
       label: "CLAUDE CODE",
       sub: "Agentic AI Toolchain",
-      desc: "Terminal-first agentic pairing & autonomous issue-tracked development.",
+      desc: "Terminal-first agentic pairing & autonomous workflows.",
       defaultSvg: "/svg/claude-default.svg",
       hoverSvg: "/svg/claude-hover.svg",
       delay: 0.12,
@@ -107,7 +107,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       row: 3,
       label: "ENTERPRISE CLIENTS",
       value: "7+",
-      sub: "Fortune 500s & Scaleups",
+      sub: "Fortune 500 Companies",
       delay: 0.18,
       isFeatured: false,
     },
@@ -120,7 +120,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "100%",
       badge: "RUNTIME",
       sub: "Event-Driven API Gateways",
-      desc: "High-concurrency streaming runtimes, WebSockets & zero-downtime workers.",
+      desc: "High-concurrency streaming runtimes & WebSocket workers.",
       delay: 0.22,
       isFeatured: false,
     },
@@ -133,7 +133,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "18/15",
       badge: "WEB",
       sub: "Modern Web SPAs",
-      desc: "React 18 SPAs across 16+ responsive routes & Next.js Server Components.",
+      desc: "React 18 SPAs across 16+ routes with Next.js Server Components.",
       delay: 0.26,
       isFeatured: false,
     },
@@ -146,7 +146,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "4 Svcs",
       badge: "API",
       sub: "Async Microservices",
-      desc: "Async 4-microservice cluster (Query, Discovery, Enrichment, Publisher).",
+      desc: "Async 4-microservice cluster for high-scale data pipelines.",
       delay: 0.30,
       isFeatured: false,
     },
@@ -163,7 +163,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "34+",
       badge: "PROD",
       sub: "Naver & Google GenAI Intents",
-      desc: "34-intent bilingual RAG pipeline with hybrid BM25 + dense vector re-ranking.",
+      desc: "34-intent bilingual RAG pipeline with BM25 & dense vector re-ranking.",
       delay: 0.0,
       isFeatured: false,
     },
@@ -187,7 +187,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "10K+",
       badge: "STREAM",
       sub: "Msg/Sec Event Pipeline",
-      desc: "Distributed event streaming paired with PostgreSQL pgvector semantic similarity.",
+      desc: "Distributed event streaming paired with pgvector semantic similarity.",
       delay: 0.12,
       isFeatured: false,
     },
@@ -200,7 +200,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "iOS/And",
       badge: "MOBILE",
       sub: "Cross-Platform Mobile App",
-      desc: "Solo build with Firebase auth, streaming NDJSON search, signed store releases.",
+      desc: "Solo build with Firebase auth, NDJSON search & signed store releases.",
       delay: 0.18,
       isFeatured: false,
     },
@@ -224,7 +224,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "CLOUD",
       badge: "DEVOPS",
       sub: "Cloud Native Infrastructure",
-      desc: "Multi-stage container builds, HPA autoscaling, Redis session caching.",
+      desc: "Multi-stage container builds, HPA autoscaling & Redis session caching.",
       delay: 0.26,
       isFeatured: false,
     },
@@ -237,7 +237,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "AI-1st",
       badge: "VELOCITY",
       sub: "Autonomous Dev Sessions",
-      desc: "Pairing Claude Code with issue-tracked sessions to ship solo at team speed.",
+      desc: "Pairing Claude Code with issue-tracked sessions to ship solo at speed.",
       delay: 0.28,
       isFeatured: false,
     },
@@ -250,7 +250,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "0-FAIL",
       badge: "MONOREPO",
       sub: "Automated Verification",
-      desc: "Jenkins, SonarQube, Pyright strict type checking, and Turborepo monorepos.",
+      desc: "Jenkins, SonarQube, Pyright strict types & Turborepo monorepos.",
       delay: 0.30,
       isFeatured: false,
     },
@@ -314,9 +314,10 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
     });
   };
 
-  const toggleGravity = () => {
+  const setGravityExplicit = (active: boolean) => {
+    if (active === gravityOn) return;
     playClick();
-    if (gravityOn) {
+    if (!active) {
       setGravityOn(false);
       return;
     }
@@ -329,6 +330,10 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
     setFallTargets(desktop);
     setMobileFallTargets(mobile);
     setGravityOn(true);
+  };
+
+  const toggleGravity = () => {
+    setGravityExplicit(!gravityOn);
   };
 
   // Motion props per tile, memoised so scroll re-renders hand framer-motion
@@ -451,7 +456,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
           >
             {/* Top-Left Illuminated Triangular Fold (Neon Yellow on Hover) */}
             <div
-              className={`absolute top-0 left-0 w-4 h-4 bg-[#ffff00] transition-opacity duration-200 pointer-events-none ${
+              className={`absolute top-0 left-0 w-4 h-4 bg-[#ffff33] transition-opacity duration-200 pointer-events-none ${
                 isHovered ? "opacity-100" : "opacity-0 group-hover:opacity-100"
               }`}
               style={{
@@ -500,20 +505,20 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
                   <div className="flex flex-col pr-1 sm:pr-2">
                     <span
                       className={`font-mono ${isMobile ? "text-[8px] sm:text-[9px]" : "text-[9px] sm:text-[10px]"} uppercase tracking-wider font-black mb-0.5 ${
-                        isHovered ? "text-[#ffff00]" : "text-[#0a0a0a] group-hover:text-[#ffff00]"
+                        isHovered ? "text-[#ffff33]" : "text-[#0a0a0a] group-hover:text-[#ffff33]"
                       }`}
                     >
                       {tile.sub}
                     </span>
                     <p
-                      className={`text-[8.5px] sm:text-[9.5px] leading-tight font-sans line-clamp-2 ${
+                      className={`text-[8.5px] sm:text-[9.5px] leading-tight font-sans line-clamp-3 ${
                         isHovered ? "text-white/80" : "text-[#0a0a0a]/80 group-hover:text-white/80"
                       }`}
                     >
                       {tile.desc}
                     </p>
                   </div>
-                  <div className={`relative ${isMobile ? "w-9 h-9 sm:w-12 sm:h-12" : "w-12 h-12 sm:w-14 sm:h-14"} shrink-0 flex items-center justify-center`}>
+                  <div className={`relative ${isMobile ? "w-8 h-8 sm:w-11 sm:h-11" : "w-12 h-12 sm:w-14 sm:h-14"} shrink-0 flex items-center justify-center`}>
                     <Image
                       src={tile.defaultSvg}
                       alt={tile.label}
@@ -551,8 +556,8 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
                       <span
                         className={`font-mono ${isMobile ? "text-[8px]" : "text-[9px]"} uppercase px-1 py-0.5 rounded font-black ${
                           isHovered
-                            ? "bg-[#ffff00] text-[#050505]"
-                            : "bg-[#0a0a0a] text-[#ffff00] group-hover:bg-[#ffff00] group-hover:text-[#050505]"
+                            ? "bg-[#ffff33] text-[#050505]"
+                            : "bg-[#0a0a0a] text-[#ffff33] group-hover:bg-[#ffff33] group-hover:text-[#050505]"
                         }`}
                       >
                         {tile.badge}
@@ -560,7 +565,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
                     )}
                   </div>
                   <p
-                    className={`text-[8.5px] sm:text-[9.5px] leading-tight font-sans line-clamp-2 transition-colors duration-200 ${
+                    className={`text-[8.5px] sm:text-[9.5px] leading-tight font-sans line-clamp-3 transition-colors duration-200 ${
                       isHovered ? "text-white/85" : "text-[#0a0a0a]/85 group-hover:text-white/85"
                     }`}
                   >
@@ -578,7 +583,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
   return (
     <section
       id="capabilities-tiles"
-      className="relative w-full lg:w-[200vw] h-auto lg:h-screen shrink-0 bg-[#ffff00] text-[#0a0a0a] flex flex-col lg:flex-row select-none overflow-visible lg:overflow-hidden"
+      className="relative w-full lg:w-[200vw] h-auto lg:h-screen shrink-0 bg-[#ffff33] text-[#0a0a0a] flex flex-col lg:flex-row select-none overflow-visible lg:overflow-hidden"
     >
       {/* 6 Vertical Guidelines across Screen 1 & 2 (Desktop only) */}
       <div className="hidden lg:flex absolute inset-0 justify-between pointer-events-none z-0">
@@ -614,7 +619,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="px-2.5 py-0.5 rounded bg-[#0a0a0a] text-[#ffff00] text-[10px] font-mono font-black shadow-sm">
+            <span className="px-2.5 py-0.5 rounded bg-[#0a0a0a] text-[#ffff33] text-[10px] font-mono font-black shadow-sm">
               SCREEN 1 OF 2 &middot; CORE CAPABILITIES
             </span>
           </div>
@@ -626,7 +631,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
 
           {/* Gravity lever in Column 1, Row 3: bolted in place, it never falls */}
           <div className="absolute lg:left-[2.5%] lg:top-[calc(1.75rem+50vh)] w-[92vw] sm:w-[45vw] lg:w-[17.5vw] h-[22vh] min-h-[135px] max-h-[175px] z-20">
-            <GravityLever on={gravityOn} onToggle={toggleGravity} onHover={playHover} progress={effectiveS1Progress} />
+            <GravityLever on={gravityOn} onToggle={toggleGravity} onSet={setGravityExplicit} onHover={playHover} progress={effectiveS1Progress} />
           </div>
         </div>
 
@@ -640,6 +645,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
               <GravityLever
                 on={gravityOn}
                 onToggle={toggleGravity}
+                onSet={setGravityExplicit}
                 onHover={playHover}
                 progress={Math.min(1, Math.max(0.55, effectiveS1Progress * 1.2))}
                 compact
@@ -686,7 +692,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="px-2.5 py-0.5 rounded bg-[#0a0a0a] text-[#ffff00] text-[10px] font-mono font-black shadow-sm">
+            <span className="px-2.5 py-0.5 rounded bg-[#0a0a0a] text-[#ffff33] text-[10px] font-mono font-black shadow-sm">
               SCREEN 2 OF 2 &middot; DISTRIBUTED SYSTEMS
             </span>
           </div>
@@ -722,18 +728,19 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
   );
 }
 
-// Physical lever that owns the gravity state. The arm pivots at its base:
-// leaning left is OFF, swung right is ON. It moves on a spring so it lands
-// with a little overshoot, and the knob lights neon once gravity is engaged.
+// Physical lever that owns the gravity state. Supports dragging with pointer/touch
+// or clicking/tapping to toggle. Arm tracks angle smoothly and snaps with spring physics.
 function GravityLever({
   on,
   onToggle,
+  onSet,
   onHover,
   progress,
   compact = false,
 }: {
   on: boolean;
   onToggle: () => void;
+  onSet?: (active: boolean) => void;
   onHover: () => void;
   progress: number; // screen reveal progress, drives the scale-in
   compact?: boolean;
@@ -742,14 +749,84 @@ function GravityLever({
   const height = compact ? 54 : 64;
   const arm = compact ? 38 : 46;
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragAngle, setDragAngle] = useState(on ? 42 : -42);
+  const leverBoxRef = useRef<HTMLDivElement>(null);
+  const dragStartRef = useRef<{ x: number; y: number; moved: boolean }>({ x: 0, y: 0, moved: false });
+
+  // Sync angle when `on` changes externally while not dragging
+  useEffect(() => {
+    if (!isDragging) {
+      setDragAngle(on ? 42 : -42);
+    }
+  }, [on, isDragging]);
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.button !== 0) return;
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch {
+      // ignore
+    }
+    dragStartRef.current = { x: e.clientX, y: e.clientY, moved: false };
+    setIsDragging(true);
+    onHover?.();
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isDragging || !leverBoxRef.current) return;
+    const dxFromStart = e.clientX - dragStartRef.current.x;
+    const dyFromStart = e.clientY - dragStartRef.current.y;
+    if (Math.hypot(dxFromStart, dyFromStart) > 4) {
+      dragStartRef.current.moved = true;
+    }
+
+    const rect = leverBoxRef.current.getBoundingClientRect();
+    const pivotX = rect.left + rect.width / 2;
+    const pivotY = rect.bottom - 10;
+
+    const dx = e.clientX - pivotX;
+    const dy = e.clientY - pivotY;
+    const dyUp = Math.max(1, -dy);
+
+    const rad = Math.atan2(dx, dyUp);
+    let deg = rad * (180 / Math.PI);
+    deg = Math.max(-46, Math.min(46, deg));
+    setDragAngle(deg);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch {
+      // ignore
+    }
+    setIsDragging(false);
+
+    if (dragStartRef.current.moved) {
+      // Snapped via drag
+      const shouldBeOn = dragAngle > 0;
+      if (onSet) {
+        onSet(shouldBeOn);
+      } else if (shouldBeOn !== on) {
+        onToggle();
+      }
+      setDragAngle(shouldBeOn ? 42 : -42);
+    } else {
+      // Tap/click toggles
+      onToggle();
+    }
+  };
+
+  const isVisuallyOn = isDragging ? dragAngle > 0 : on;
+  const currentRotate = isDragging ? dragAngle : (on ? 42 : -42);
+
   return (
-    <button
-      type="button"
-      onClick={onToggle}
-      onMouseEnter={onHover}
-      aria-pressed={on}
-      aria-label={on ? "Turn gravity off" : "Turn gravity on"}
-      className="group relative w-full h-full flex flex-col items-center justify-center gap-1.5 cursor-pointer select-none outline-none"
+    <div
+      role="region"
+      aria-label="Gravity Lever Control"
+      className="group relative w-full h-full flex flex-col items-center justify-center gap-1.5 select-none"
       style={{
         transform: `scale(${Math.min(1, Math.max(0, progress * 1.8))})`,
         opacity: Math.min(1, Math.max(0, progress * 2.2)),
@@ -760,9 +837,18 @@ function GravityLever({
         // GRAVITY LEVER
       </span>
 
-      <div className="relative" style={{ width, height }}>
+      {/* Interactive Draggable Box with pointer events */}
+      <div
+        ref={leverBoxRef}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+        className="relative cursor-grab active:cursor-grabbing touch-none select-none"
+        style={{ width, height }}
+      >
         {/* Dashed travel arc */}
-        <svg viewBox={`0 0 ${width} ${height}`} className="absolute inset-0 w-full h-full text-[#0a0a0a]/35">
+        <svg viewBox={`0 0 ${width} ${height}`} className="absolute inset-0 w-full h-full text-[#0a0a0a]/35 pointer-events-none">
           <path
             d={`M ${width / 2 - arm * 0.78} ${height - 6} A ${arm} ${arm} 0 0 1 ${width / 2 + arm * 0.78} ${height - 6}`}
             fill="none"
@@ -774,37 +860,53 @@ function GravityLever({
 
         {/* Base plate */}
         <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[64px] h-[12px] bg-[#0a0a0a]"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[64px] h-[12px] bg-[#0a0a0a] pointer-events-none"
           style={{ clipPath: "polygon(0 100%, 8px 0, calc(100% - 8px) 0, 100% 100%)" }}
         />
 
         {/* Arm, pivoting at the base */}
         <motion.div
-          initial={false}
-          animate={{ rotate: on ? 42 : -42 }}
-          transition={{ type: "spring", stiffness: 220, damping: 13, mass: 0.9 }}
-          className="absolute left-1/2 w-[6px] -ml-[3px] origin-bottom bg-[#0a0a0a] rounded-full"
+          animate={{ rotate: currentRotate }}
+          transition={
+            isDragging
+              ? { type: "tween", duration: 0 }
+              : { type: "spring", stiffness: 240, damping: 14, mass: 0.85 }
+          }
+          className="absolute left-1/2 w-[6px] -ml-[3px] origin-bottom bg-[#0a0a0a] rounded-full pointer-events-none"
           style={{ bottom: 10, height: arm }}
         >
           <span
-            className={`absolute -top-[10px] left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 border-[#0a0a0a] transition-colors duration-200 ${
-              on ? "bg-[#ffff00] shadow-[0_0_14px_rgba(255,255,0,0.9)]" : "bg-[#0a0a0a] group-hover:bg-[#2a2a2a]"
+            className={`absolute -top-[10px] left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-2 border-[#0a0a0a] transition-colors duration-150 ${
+              isVisuallyOn ? "bg-[#ffff33] shadow-[0_0_14px_rgba(255,255,51,0.9)]" : "bg-[#0a0a0a] group-hover:bg-[#2a2a2a]"
             }`}
           />
         </motion.div>
 
         {/* Pivot cap */}
-        <div className="absolute bottom-[4px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#ffff00] border-2 border-[#0a0a0a] z-10" />
+        <div className="absolute bottom-[4px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#ffff33] border-2 border-[#0a0a0a] z-10 pointer-events-none" />
       </div>
 
+      {/* Clickable OFF / ON labels */}
       <div className="flex items-center justify-between font-mono text-[9px] font-black tracking-widest" style={{ width }}>
-        <span className={`transition-colors duration-200 ${on ? "text-[#0a0a0a]/35" : "text-[#0a0a0a]"}`}>OFF</span>
-        <span className={`transition-colors duration-200 ${on ? "text-[#0a0a0a]" : "text-[#0a0a0a]/35"}`}>ON</span>
+        <button
+          type="button"
+          onClick={() => { if (onSet) onSet(false); else if (on) onToggle(); }}
+          className={`cursor-pointer transition-colors duration-200 hover:text-[#0a0a0a] ${isVisuallyOn ? "text-[#0a0a0a]/35" : "text-[#0a0a0a] underline decoration-2 underline-offset-2"}`}
+        >
+          OFF
+        </button>
+        <button
+          type="button"
+          onClick={() => { if (onSet) onSet(true); else if (!on) onToggle(); }}
+          className={`cursor-pointer transition-colors duration-200 hover:text-[#0a0a0a] ${isVisuallyOn ? "text-[#0a0a0a] underline decoration-2 underline-offset-2" : "text-[#0a0a0a]/35"}`}
+        >
+          ON
+        </button>
       </div>
 
       <span className="font-mono text-[8px] font-bold uppercase tracking-wider text-[#0a0a0a]/70 text-center">
-        {on ? "GRAVITY ENGAGED \u00b7 PULL TO RESTORE" : "PULL TO TURN ON GRAVITY"}
+        {on ? "GRAVITY ENGAGED · DRAG OR TAP TO RESTORE" : "DRAG OR TAP TO TURN ON GRAVITY"}
       </span>
-    </button>
+    </div>
   );
 }
