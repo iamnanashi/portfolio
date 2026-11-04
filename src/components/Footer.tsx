@@ -79,7 +79,7 @@ export default function Footer() {
 
               {/* Download CV */}
               <a
-                href="/Shivang_CV.pdf"
+                href="/Shivang_CV.pdf?v=2"
                 download="Shivang_Chauhan_CV.pdf"
                 onClick={playClick}
                 onMouseEnter={playHover}
@@ -179,7 +179,7 @@ export default function Footer() {
               EMAIL
             </a>
             <a
-              href="/Shivang_CV.pdf"
+              href="/Shivang_CV.pdf?v=2"
               download="Shivang_Chauhan_CV.pdf"
               onClick={playClick}
               className="hover:text-white transition-colors"

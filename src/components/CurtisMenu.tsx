@@ -96,7 +96,7 @@ export default function CurtisMenu({ isOpen, onClose }: CurtisMenuProps) {
     { num: "03", label: "GITHUB", href: "https://github.com/iporky", isDownload: false },
     { num: "04", label: "EMAIL", href: "mailto:chauhanshivang4@gmail.com", isDownload: false },
     { num: "05", label: "WHATSAPP", href: "https://wa.me/919176788879", isDownload: false },
-    { num: "06", label: "RESUME", href: "/Shivang_CV.pdf", isDownload: true, downloadName: "Shivang_Chauhan_Resume.pdf" },
+    { num: "06", label: "RESUME", href: "/Shivang_CV.pdf?v=2", isDownload: true, downloadName: "Shivang_Chauhan_Resume.pdf" },
   ];
 
   return (

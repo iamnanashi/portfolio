@@ -335,7 +335,7 @@ export default function AboutSection() {
                 <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; SDE III / Tech Lead &middot; PDF (653 KB)</span>
               </div>
               <a
-                href="/Shivang_CV.pdf"
+                href="/Shivang_CV.pdf?v=2"
                 download="Shivang_Chauhan_CV.pdf"
                 onClick={playClick}
                 onMouseEnter={playHover}
@@ -505,7 +505,7 @@ export default function AboutSection() {
                 <span>SHOOT A MESSAGE</span>
               </a>
               <a
-                href="/Shivang_CV.pdf"
+                href="/Shivang_CV.pdf?v=2"
                 download="Shivang_Chauhan_CV.pdf"
                 onClick={playClick}
                 onMouseEnter={playHover}

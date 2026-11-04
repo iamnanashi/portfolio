@@ -121,7 +121,7 @@ export default function Navbar() {
 
           {/* Download Resume Button */}
           <a
-            href="/Shivang_CV.pdf"
+            href="/Shivang_CV.pdf?v=2"
             download="Shivang_Chauhan_CV.pdf"
             onClick={playClick}
             onMouseEnter={playHover}
