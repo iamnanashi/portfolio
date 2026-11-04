@@ -170,7 +170,7 @@ export default function AboutSection() {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <span className="w-2 h-2 rounded-full bg-[#ffff00] shadow-[0_0_8px_#ffff00]" />
           <span className="font-bold text-white tracking-wider">SHIVANG CHAUHAN</span>
-          <span className="text-white/40">// 04 LEAD ARCHITECT &amp; SDE III</span>
+          <span className="text-white/40">// 04 FORWARD DEPLOYED ENGINEER &amp; WEB/APP DEV</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-[11px] text-white/40">
           <span>BANGALORE, IN &middot; 11:20 PM</span>
@@ -191,7 +191,7 @@ export default function AboutSection() {
       {/* Upper Context Quote visible above the raised garage door (Matching Image 2) */}
       <div className="relative z-20 px-6 sm:px-12 py-3 text-center max-w-4xl mx-auto">
         <p className="font-mono text-xs sm:text-sm text-white/70 leading-relaxed">
-          &ldquo;Led product and distributed architectures across Fortune 500s (GE, Verizon) &amp; high-scale conversational AI platforms ([24]7.ai, Konnect). Architecting async FastAPI, Kafka pipelines &amp; agentic systems.&rdquo;
+          &ldquo;Forward Deployed Engineer delivering enterprise web &amp; mobile platforms for Fortune 500s (GE, Verizon) and high-growth ventures. Architecting scalable full-stack systems and technical AEO/SEO for maximum search &amp; answer-engine visibility.&rdquo;
         </p>
       </div>
 
@@ -304,12 +304,12 @@ export default function AboutSection() {
             <motion.div variants={blockVariants} className="p-4 rounded-xl cyber-glass border border-white/10">
               <h3 className="font-mono text-xs text-[#ffff00] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-bold">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>AI-First Engineering Ethos</span>
+                <span>Engineering &amp; AEO / SEO Focus</span>
               </h3>
               <p className="text-xs text-white/80 leading-relaxed font-sans mb-3 min-h-[3.75rem]">
                 <Typewriter
                   active={deckRevealed}
-                  text={"\u201cI work AI-first \u2014 pairing agentic tooling (Claude Code, Copilot) with sound architecture to ship production systems solo at team speed.\u201d"}
+                  text={"\u201cForward Deployed Engineer bridging product goals with field delivery — building resilient web & app platforms and engineering AEO/SEO discovery for modern search engines.\u201d"}
                 />
               </p>
               <div className="space-y-1.5 font-mono text-[10px] text-white/60">
@@ -332,7 +332,7 @@ export default function AboutSection() {
             >
               <div>
                 <span className="text-xs font-mono font-bold text-white block">Shivang Chauhan CV</span>
-                <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; SDE III &middot; PDF (822 KB)</span>
+                <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; FDE &amp; SDE III &middot; PDF (822 KB)</span>
               </div>
               <a
                 href="/Shivang_CV.pdf"

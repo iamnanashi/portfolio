@@ -1,31 +1,39 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { Cpu, Layout, Smartphone, Server, Wrench, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { Cpu, Layout, Smartphone, Server, Wrench, Sparkles, ChevronLeft, ChevronRight, Search, Compass } from "lucide-react";
 import { useSound } from "./SoundManager";
 import ScrambleText from "./ScrambleText";
 
 export default function TechMatrix() {
   const { playClick, playHover } = useSound();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>("ai");
+  const [selectedCategory, setSelectedCategory] = useState<string>("fde");
 
   const categories = [
-    { id: "ai", label: "AI & AGENTIC", icon: Cpu },
-    { id: "frontend", label: "FRONTEND MASTERY", icon: Layout },
+    { id: "fde", label: "FDE & CLIENT DELIVERY", icon: Compass },
+    { id: "aeo_seo", label: "AEO & TECHNICAL SEO", icon: Search },
+    { id: "frontend", label: "WEB ARCHITECTURE", icon: Layout },
     { id: "mobile", label: "MOBILE (REACT NATIVE)", icon: Smartphone },
     { id: "backend", label: "BACKEND & DISTRIBUTED", icon: Server },
     { id: "platform", label: "PLATFORM & DEVOPS", icon: Wrench },
   ];
 
   const allSkills = [
-    // AI & Agentic
-    { name: "Claude Code", category: "ai", level: "EXPERT", note: "Autonomous issue-tracked sessions, test generation & refactoring", hot: true },
-    { name: "Agentic Workflows", category: "ai", level: "EXPERT", note: "End-to-end solo engineering pairing AI tools with sound architecture", hot: true },
-    { name: "RAG Pipelines", category: "ai", level: "ADVANCED", note: "Bilingual intent-aware retrieval (34 intents, 31 categories)", hot: true },
-    { name: "pgvector & Embeddings", category: "ai", level: "ADVANCED", note: "PostgreSQL vector similarity search for semantic discovery", hot: false },
-    { name: "Google GenAI & Naver", category: "ai", level: "ADVANCED", note: "Multi-provider LLM integrations with fallback handling", hot: false },
-    { name: "Prompt Design", category: "ai", level: "EXPERT", note: "Structured schema generation & context steering", hot: false },
+    // FDE & Client Delivery
+    { name: "Field Architecture & Delivery", category: "fde", level: "EXPERT", note: "Embedding with stakeholders, enterprise 0-to-1 deployments & SLA compliance", hot: true },
+    { name: "Enterprise Integrations", category: "fde", level: "EXPERT", note: "Client API gateways, mission-critical pipelines (GE, Verizon, [24]7.ai)", hot: true },
+    { name: "Rapid Prototyping to Prod", category: "fde", level: "EXPERT", note: "De-risking technical requirements and turning prototypes into resilient platforms", hot: true },
+    { name: "Client-Facing Tech Leadership", category: "fde", level: "EXPERT", note: "Translating ambiguous business demands into high-velocity engineering roadmaps", hot: false },
+    { name: "Self-Serve Ad Tech & Runtimes", category: "fde", level: "EXPERT", note: "Target, Google DV360, and Meta Marketing API production integrations", hot: false },
+
+    // AEO & Technical SEO
+    { name: "Answer Engine Optimization (AEO)", category: "aeo_seo", level: "EXPERT", note: "Optimizing structured entity data & Q&A content for Perplexity, ChatGPT & SGE", hot: true },
+    { name: "Schema.org & JSON-LD Graphs", category: "aeo_seo", level: "EXPERT", note: "Machine-readable entity-relationship graphs for knowledge-graph ingestion", hot: true },
+    { name: "Core Web Vitals & Sub-100ms TTFB", category: "aeo_seo", level: "EXPERT", note: "SSR/ISR edge caching, canvas rendering optimizations, 100/100 Lighthouse", hot: true },
+    { name: "Semantic Search & Vector Retrieval", category: "aeo_seo", level: "ADVANCED", note: "pgvector similarity, intent-driven content structures & taxonomy mapping", hot: false },
+    { name: "Technical SEO Auditing", category: "aeo_seo", level: "EXPERT", note: "Crawl budget management, dynamic sitemaps, robots.txt & canonicalization", hot: false },
+    { name: "LLM Discoverability & Citations", category: "aeo_seo", level: "EXPERT", note: "Information density tuning for generative search engine extraction", hot: false },
 
     // Frontend
     { name: "React & Next.js", category: "frontend", level: "EXPERT", note: "12+ yrs experience, App Router, SSR, Server Components", hot: true },

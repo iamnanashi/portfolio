@@ -56,7 +56,7 @@ export default function Navbar() {
               </span>
             </div>
             <p className="font-mono text-[10px] text-white/40 tracking-tight">
-              Full-Stack & Agentic AI Architect
+              FDE · Web &amp; App Dev · AEO &amp; SEO
             </p>
           </div>
         </a>

@@ -22,7 +22,7 @@ export default function CaseStudies() {
       color: "#ffff00",
       highlights: [
         {
-          title: "Agentic Conversational AI Runtime",
+          title: "Conversational Runtime & Messaging Platform",
           desc: "Architected an async Python FastAPI backend with Node.js integration layer for intent resolution, session management, and Redis-backed state. Designed a configurable React/TypeScript/Redux-Saga chat UI with WebSockets and resumable sessions.",
           tech: ["FastAPI", "Python", "Node.js", "Redis", "React", "TypeScript", "WebSockets"],
         },
@@ -131,7 +131,7 @@ export default function CaseStudies() {
             </h2>
           </div>
           <p className="font-mono text-xs sm:text-sm text-white/50 max-w-sm">
-            Direct impact across distributed microservices, agentic conversational AI, and ad tech.
+            Direct impact across distributed microservices, enterprise web/app architectures, and ad tech.
           </p>
         </div>
 
