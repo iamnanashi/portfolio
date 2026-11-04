@@ -332,7 +332,7 @@ export default function AboutSection() {
             >
               <div>
                 <span className="text-xs font-mono font-bold text-white block">Shivang Chauhan CV</span>
-                <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; FDE &amp; SDE III &middot; PDF (822 KB)</span>
+                <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; Lead Engineer &amp; Manager &middot; PDF (642 KB)</span>
               </div>
               <a
                 href="/Shivang_CV.pdf"

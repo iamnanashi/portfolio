@@ -46,7 +46,7 @@ export default function SelectedProducts() {
       imageType: "photo",
       accent: "#ffff00",
       threshold: 0.522,
-      desc: "Solo cross-platform mobile app in React Native/Expo featuring AI travel companion Kiki. Firebase auth, streaming NDJSON search, EN/KR i18n, voice search, and signed Play Store release pipelines.",
+      desc: "Cross-platform mobile app in React Native/Expo featuring AI travel companion Kiki. Led engineering across Firebase auth, streaming NDJSON search, EN/KR i18n, voice search, and signed Play Store release pipelines.",
       tags: ["React Native", "Expo", "Travel with Kiki", "NDJSON", "Play Store"],
       icon: Smartphone,
     },
