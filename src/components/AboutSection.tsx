@@ -332,10 +332,10 @@ export default function AboutSection() {
             >
               <div>
                 <span className="text-xs font-mono font-bold text-white block">Shivang Chauhan CV</span>
-                <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; SDE III / Tech Lead &middot; PDF (653 KB)</span>
+                <span className="text-[10px] font-mono text-white/40">12+ YRS &middot; SDE III / Tech Lead &middot; PDF (124 KB)</span>
               </div>
               <a
-                href="/Shivang_CV.pdf?v=2"
+                href="/Shivang_CV.pdf?v=3"
                 download="Shivang_Chauhan_CV.pdf"
                 onClick={playClick}
                 onMouseEnter={playHover}
@@ -505,7 +505,7 @@ export default function AboutSection() {
                 <span>SHOOT A MESSAGE</span>
               </a>
               <a
-                href="/Shivang_CV.pdf?v=2"
+                href="/Shivang_CV.pdf?v=3"
                 download="Shivang_Chauhan_CV.pdf"
                 onClick={playClick}
                 onMouseEnter={playHover}
@@ -541,7 +541,7 @@ export default function AboutSection() {
                 <span className="text-base group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform font-bold">↗</span>
               </a>
               <a
-                href="https://github.com/iporky"
+                href="https://github.com/iamnanashi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold text-[#0a0a0a] hover:underline flex items-center justify-between py-1.5 border-b border-[#0a0a0a]/15 hover:border-[#0a0a0a]/40 transition-all group"

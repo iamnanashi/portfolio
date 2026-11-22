@@ -8,9 +8,9 @@
 - **Phone / WhatsApp**: +91 91767 88879 (wa.me/919176788879)
 - **Email**: chauhanshivang4@gmail.com
 - **LinkedIn**: https://www.linkedin.com/in/shivang-chauhan/
-- **GitHub**: https://github.com/iporky
+- **GitHub**: https://github.com/iamnanashi
 - **Core Engineering Philosophy**:
-  > *"Full-stack engineer with 12+ years building high-scale web architectures, conversational-AI platforms, and self-serve ad tech. Works AI-first — pairing agentic tooling (Claude Code, Copilot) with sound architecture to ship production systems solo at team speed. Deep in React, React Native, Node.js, and FastAPI, with measurable cost and performance wins at enterprise scale."*
+  > *"Full-stack engineer with 12+ years building high-scale web architectures, conversational-AI platforms, and self-serve ad tech. Works AI-first — pairing agentic tooling (Claude Code, Copilot) with sound architecture to ship production systems fast with lean teams. Deep in React, React Native, Node.js, and FastAPI, with measurable cost and performance wins at enterprise scale."*
 
 ---
 
@@ -32,7 +32,7 @@
 - **Real-Time & Telemetry**: WebSockets, streaming NDJSON, Plotly.js, d3.js (custom high-scale data visualizers).
 
 ### Mobile Development
-- **React Native & Expo**: Solo end-to-end development for iOS and Android.
+- **React Native & Expo**: End-to-end development for iOS and Android.
 - **Mobile Auth & Real-Time**: Firebase multi-provider authentication, real-time sync.
 - **Features**: Voice search, bilingual EN/KR internationalization (i18n), signed release pipelines for Apple App Store and Google Play Store.
 
@@ -59,9 +59,9 @@
 - **Target Selfserve**: Built and scaled a self-serve ad-creation and delivery platform for DV360 and Meta with a React frontend and Node.js/MongoDB backend.
 - **Ad Designer & Media Personalizer**: Built an FFmpeg-powered ad designer generating creative templates from real-time audience segments and weather data; direct publishing integrations with DV360, Meta, TikTok, and Snapchat.
 
-### 2. Konnect — Seoul, Remote (Jun 2025 – Apr 2026) | Full-Stack Engineer
-- **Solo Build at Team Speed**: Delivered the entire AI-powered Korea living platform across mobile app, web platform, and distributed backend.
-- **Cross-Platform Mobile App**: Built solo in React Native / Expo (Android + iOS) with Firebase auth, streaming NDJSON search, EN/KR i18n, voice search, and signed store releases.
+### 2. Konnect — Seoul, Remote (Jun 2025 – Apr 2026) | Program Manager / Full-Stack Tech Lead
+- **Program & Team Leadership**: Led a cross-functional team delivering the entire AI-powered Korea living platform across mobile app, web platform, and distributed backend.
+- **Cross-Platform Mobile App**: Led the team that built it in React Native / Expo (Android + iOS) with Firebase auth, streaming NDJSON search, EN/KR i18n, voice search, and signed store releases.
 - **Distributed Backend**: 4-service FastAPI microservices backend (Query, Discovery, Enrichment, Publisher) over Kafka, PostgreSQL/pgvector, and Redis.
 - **Bilingual RAG**: 34 intents, 31 categories, multi-provider search (Naver, Google GenAI) and Pydantic v2 modeling.
 - **Web SPA**: React 18 SPA across 16+ responsive routes (Material UI, Tailwind CSS, Framer Motion, Redux Toolkit, Google OAuth) in a Dockerized monorepo.

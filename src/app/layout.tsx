@@ -66,7 +66,7 @@ const jsonLd = {
       "url": "https://shivangchauhan.com",
       "sameAs": [
         "https://www.linkedin.com/in/shivang-chauhan/",
-        "https://github.com/iporky",
+        "https://github.com/iamnanashi",
         "https://www.instagram.com/nanashi.la_familia/"
       ],
       "knowsAbout": [

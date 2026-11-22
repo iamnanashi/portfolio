@@ -1,17 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Copy, 
-  Check, 
-  Download, 
-  ArrowUp, 
-  Terminal, 
-  Github, 
-  Linkedin,
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Copy,
+  Check,
+  Download,
+  ArrowUp,
   Sparkles
 } from "lucide-react";
 import { useSound } from "./SoundManager";
@@ -24,18 +21,57 @@ export default function Footer() {
   const email = "chauhanshivang4@gmail.com";
   const phone = "+91 91767 88879";
 
-  const handleCopyEmail = () => {
-    playSuccess();
-    navigator.clipboard.writeText(email);
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2500);
+  const emailTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const phoneTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (emailTimer.current) clearTimeout(emailTimer.current);
+      if (phoneTimer.current) clearTimeout(phoneTimer.current);
+    };
+  }, []);
+
+  // navigator.clipboard is undefined on non-HTTPS origins (e.g. LAN preview) and
+  // can reject when permission is denied, so fall back to execCommand.
+  const copyText = async (text: string): Promise<boolean> => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch {
+      // fall through to legacy path
+    }
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch {
+      return false;
+    }
   };
 
-  const handleCopyPhone = () => {
+  const handleCopyEmail = async () => {
+    if (!(await copyText(email))) return;
     playSuccess();
-    navigator.clipboard.writeText(phone);
+    setCopiedEmail(true);
+    if (emailTimer.current) clearTimeout(emailTimer.current);
+    emailTimer.current = setTimeout(() => setCopiedEmail(false), 2500);
+  };
+
+  const handleCopyPhone = async () => {
+    if (!(await copyText(phone))) return;
+    playSuccess();
     setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2500);
+    if (phoneTimer.current) clearTimeout(phoneTimer.current);
+    phoneTimer.current = setTimeout(() => setCopiedPhone(false), 2500);
   };
 
   const scrollToTop = () => {
@@ -57,7 +93,7 @@ export default function Footer() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 mb-4 rounded cyber-notch-sm bg-[#ffff00]/10 border border-[#ffff00]/30 text-[#ffff00] font-mono text-xs tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>// 06 · INITIATE TRANSMISSION</span>
+              <span>{"// 06 · INITIATE TRANSMISSION"}</span>
             </div>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
               Ready To Scale Your Next Ambitious Architecture?
@@ -71,15 +107,21 @@ export default function Footer() {
               <button
                 onClick={handleCopyEmail}
                 onMouseEnter={playHover}
-                className="px-5 py-3 rounded cyber-notch font-mono text-xs font-bold text-black bg-[#ffff00] hover:bg-[#ffff00] transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,0,0.35)]"
+                className="px-5 py-3 rounded cyber-notch font-mono text-xs font-bold text-black bg-[#ffff00] hover:bg-[#e6e600] transition-all flex items-center gap-2 max-w-full shadow-[0_0_20px_rgba(255,255,0,0.35)]"
               >
-                {copiedEmail ? <Check className="w-4 h-4 text-black" /> : <Copy className="w-4 h-4 text-black" />}
-                <span>{copiedEmail ? "EMAIL COPIED TO CLIPBOARD!" : "COPY EMAIL (CHAUHANSHIVANG4@GMAIL.COM)"}</span>
+                {copiedEmail ? <Check className="w-4 h-4 shrink-0 text-black" /> : <Copy className="w-4 h-4 shrink-0 text-black" />}
+                {copiedEmail ? (
+                  <span>EMAIL COPIED TO CLIPBOARD!</span>
+                ) : (
+                  <span className="break-all">
+                    COPY EMAIL<span className="hidden sm:inline"> ({email.toUpperCase()})</span>
+                  </span>
+                )}
               </button>
 
               {/* Download CV */}
               <a
-                href="/Shivang_CV.pdf?v=2"
+                href="/Shivang_CV.pdf?v=3"
                 download="Shivang_Chauhan_CV.pdf"
                 onClick={playClick}
                 onMouseEnter={playHover}
@@ -105,7 +147,7 @@ export default function Footer() {
                 <a
                   href={`mailto:${email}`}
                   onClick={playClick}
-                  className="text-white hover:text-[#ffff00] transition-colors"
+                  className="text-white hover:text-[#ffff00] transition-colors break-all"
                 >
                   {email}
                 </a>
@@ -115,6 +157,7 @@ export default function Footer() {
               onClick={handleCopyEmail}
               className="p-1.5 rounded hover:bg-white/10 text-white/40 hover:text-white transition-colors"
               title="Copy email"
+              aria-label="Copy email"
             >
               {copiedEmail ? <Check className="w-3.5 h-3.5 text-[#ffff00]" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
@@ -141,6 +184,7 @@ export default function Footer() {
               onClick={handleCopyPhone}
               className="p-1.5 rounded hover:bg-white/10 text-white/40 hover:text-white transition-colors"
               title="Copy phone"
+              aria-label="Copy phone"
             >
               {copiedPhone ? <Check className="w-3.5 h-3.5 text-[#ffff00]" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
@@ -167,19 +211,19 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/40">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#ffff00] animate-pulse" />
-            <span>© 2026 SHIVANG CHAUHAN // ALL SYSTEMS OPERATIONAL</span>
+            <span>© {new Date().getFullYear()} SHIVANG CHAUHAN // ALL SYSTEMS OPERATIONAL</span>
           </div>
 
           <div className="flex items-center gap-6">
             <a
-              href="mailto:chauhanshivang4@gmail.com"
+              href={`mailto:${email}`}
               onClick={playClick}
               className="hover:text-white transition-colors"
             >
               EMAIL
             </a>
             <a
-              href="/Shivang_CV.pdf?v=2"
+              href="/Shivang_CV.pdf?v=3"
               download="Shivang_Chauhan_CV.pdf"
               onClick={playClick}
               className="hover:text-white transition-colors"

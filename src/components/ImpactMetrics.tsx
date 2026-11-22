@@ -216,8 +216,8 @@ export default function ImpactMetrics() {
   const startup = {
     name: "Konnect (Seoul, Remote)",
     type: "AI-Powered Korea Living Platform",
-    outcome: "Solo Build at Team Speed",
-    details: "Built the cross-platform mobile app solo in React Native/Expo and architected a 4-service FastAPI microservices backend over Kafka, PostgreSQL/pgvector, and bilingual RAG (34 intents).",
+    outcome: "Program Manager & Full-Stack Lead",
+    details: "Led the team that shipped the cross-platform mobile app in React Native/Expo and architected a 4-service FastAPI microservices backend over Kafka, PostgreSQL/pgvector, and bilingual RAG (34 intents).",
     url: "https://konnect.kr",
     threshold: 0.730,
   };

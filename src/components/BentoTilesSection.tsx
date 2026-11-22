@@ -200,7 +200,7 @@ export default function BentoTilesSection({ scrollProgress: propProgress }: Bent
       value: "iOS/And",
       badge: "MOBILE",
       sub: "Cross-Platform Mobile App",
-      desc: "Solo build with Firebase auth, NDJSON search & signed store releases.",
+      desc: "Team-led build with Firebase auth, NDJSON search & signed store releases.",
       delay: 0.18,
       isFeatured: false,
     },

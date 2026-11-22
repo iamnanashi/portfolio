@@ -44,7 +44,7 @@ export default function TechMatrix() {
     { name: "HTML5 Canvas / d3.js", category: "frontend", level: "ADVANCED", note: "High-performance telemetry visualizers and 60fps canvas scrubbers", hot: true },
 
     // Mobile
-    { name: "React Native & Expo", category: "mobile", level: "EXPERT", note: "Solo built cross-platform mobile apps for Android and iOS", hot: true },
+    { name: "React Native & Expo", category: "mobile", level: "EXPERT", note: "Built and led cross-platform mobile apps for Android and iOS", hot: true },
     { name: "Firebase Auth", category: "mobile", level: "ADVANCED", note: "Multi-provider OAuth, session verification, social logins", hot: false },
     { name: "Streaming NDJSON", category: "mobile", level: "ADVANCED", note: "Low-latency streaming search updates on mobile feeds", hot: true },
     { name: "Play Store & App Store", category: "mobile", level: "ADVANCED", note: "Signed production build & release automation pipelines", hot: false },

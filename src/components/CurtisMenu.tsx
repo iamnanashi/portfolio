@@ -93,10 +93,10 @@ export default function CurtisMenu({ isOpen, onClose }: CurtisMenuProps) {
   const socialLinks = [
     { num: "01", label: "LINKEDIN", href: "https://www.linkedin.com/in/shivang-chauhan/", isDownload: false },
     { num: "02", label: "INSTAGRAM", href: "https://www.instagram.com/nanashi.la_familia/", isDownload: false },
-    { num: "03", label: "GITHUB", href: "https://github.com/iporky", isDownload: false },
+    { num: "03", label: "GITHUB", href: "https://github.com/iamnanashi", isDownload: false },
     { num: "04", label: "EMAIL", href: "mailto:chauhanshivang4@gmail.com", isDownload: false },
     { num: "05", label: "WHATSAPP", href: "https://wa.me/919176788879", isDownload: false },
-    { num: "06", label: "RESUME", href: "/Shivang_CV.pdf?v=2", isDownload: true, downloadName: "Shivang_Chauhan_Resume.pdf" },
+    { num: "06", label: "RESUME", href: "/Shivang_CV.pdf?v=3", isDownload: true, downloadName: "Shivang_Chauhan_Resume.pdf" },
   ];
 
   return (
