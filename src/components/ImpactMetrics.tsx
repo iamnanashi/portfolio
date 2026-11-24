@@ -187,9 +187,9 @@ export default function ImpactMetrics() {
     },
     {
       name: "[24]7.ai / Google & Meta Partner",
-      role: "SDE III",
-      outcome: "Automated Ad Tech & Runtimes",
-      details: "Engineered Target Selfserve ad delivery engine publishing dynamically to DV360, Meta, TikTok, and Snapchat via weather & audience segment triggers.",
+      role: "SDE III / Tech Lead",
+      outcome: "~50% Cloud Cost Cut",
+      details: "Leads a 12-engineer team: migrated product lines to Azure AKS (Helm, Argo CD, Jenkins), cutting infra cost ~50%, and shipped GenAI campaign creation that cut setup from 30 to 10 minutes.",
       logo: "/companies/247ai.svg",
       type: "Enterprise Conversational AI & Ad-Tech",
       threshold: 0.685,

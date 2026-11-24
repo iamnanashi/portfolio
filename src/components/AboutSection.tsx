@@ -170,7 +170,7 @@ export default function AboutSection() {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <span className="w-2 h-2 rounded-full bg-[#ffff00] shadow-[0_0_8px_#ffff00]" />
           <span className="font-bold text-white tracking-wider">SHIVANG CHAUHAN</span>
-          <span className="text-white/40">// 04 FORWARD DEPLOYED ENGINEER &amp; WEB/APP DEV</span>
+          <span className="text-white/40">// 04 LEAD FULL-STACK ENGINEER &amp; PROGRAM MANAGER</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-[11px] text-white/40">
           <span>BANGALORE, IN &middot; 11:20 PM</span>
@@ -191,7 +191,7 @@ export default function AboutSection() {
       {/* Upper Context Quote visible above the raised garage door (Matching Image 2) */}
       <div className="relative z-20 px-6 sm:px-12 py-3 text-center max-w-4xl mx-auto">
         <p className="font-mono text-xs sm:text-sm text-white/70 leading-relaxed">
-          &ldquo;Forward Deployed Engineer delivering enterprise web &amp; mobile platforms for Fortune 500s (GE, Verizon) and high-growth ventures. Architecting scalable full-stack systems and technical AEO/SEO for maximum search &amp; answer-engine visibility.&rdquo;
+          &ldquo;Lead Full-Stack Engineer &amp; Program Manager delivering enterprise web, mobile &amp; cloud platforms for Fortune 500s (GE, Verizon) and high-growth ventures. Leading a 12-engineer team from roadmap to release, hands-on across the full stack and technical AEO/SEO.&rdquo;
         </p>
       </div>
 
@@ -309,7 +309,7 @@ export default function AboutSection() {
               <p className="text-xs text-white/80 leading-relaxed font-sans mb-3 min-h-[3.75rem]">
                 <Typewriter
                   active={deckRevealed}
-                  text={"\u201cForward Deployed Engineer bridging product goals with field delivery — building resilient web & app platforms and engineering AEO/SEO discovery for modern search engines.\u201d"}
+                  text={"\u201cLead Full-Stack Engineer & Program Manager bridging product goals with delivery — leading teams, shipping resilient web & app platforms, and engineering AEO/SEO discovery for modern search engines.\u201d"}
                 />
               </p>
               <div className="space-y-1.5 font-mono text-[10px] text-white/60">

@@ -15,11 +15,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shivang Chauhan | Forward Deployed Engineer, Web & App Developer, AEO & SEO",
+  title: "Shivang Chauhan | Lead Full-Stack Engineer & Program Manager, FDE, AEO & SEO",
   description:
-    "Portfolio of Shivang Chauhan — Forward Deployed Engineer (FDE) and Web/App Developer with 12+ years building enterprise web architectures, cross-platform mobile apps, and high-visibility AEO & Technical SEO systems.",
+    "Portfolio of Shivang Chauhan — Lead Full-Stack Engineer and Program Manager (SDE III) with 12+ years leading engineering teams and delivering enterprise web platforms, cross-platform mobile apps, cloud migrations, and AEO & Technical SEO systems.",
   keywords: [
     "Shivang Chauhan",
+    "Lead Full-Stack Engineer",
+    "Program Manager",
+    "Technical Program Manager",
     "Forward Deployed Engineer",
     "FDE",
     "Web Developer",
@@ -37,17 +40,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Shivang Chauhan" }],
   openGraph: {
-    title: "Shivang Chauhan | Forward Deployed Engineer, Web & App Developer, AEO & SEO",
+    title: "Shivang Chauhan | Lead Full-Stack Engineer & Program Manager, FDE, AEO & SEO",
     description:
-      "12+ years building high-scale web platforms, mobile apps, and search-optimized architectures. Forward Deployed Engineer specializing in field delivery, enterprise systems, and AEO/SEO discoverability.",
+      "12+ years leading engineering teams and delivering high-scale web platforms, mobile apps, and cloud programs. Lead Full-Stack Engineer & Program Manager with Forward Deployed delivery and AEO/SEO expertise.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shivang Chauhan | Forward Deployed Engineer, Web & App Developer, AEO & SEO",
+    title: "Shivang Chauhan | Lead Full-Stack Engineer & Program Manager, FDE, AEO & SEO",
     description:
-      "Forward Deployed Engineer (FDE) and Web/App Developer with 12+ years building enterprise web platforms, mobile apps, and AEO/SEO search visibility.",
+      "Lead Full-Stack Engineer & Program Manager with 12+ years leading teams and building enterprise web platforms, mobile apps, and AEO/SEO search visibility.",
   },
 };
 
@@ -58,9 +61,9 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://shivangchauhan.com/#person",
       "name": "Shivang Chauhan",
-      "jobTitle": "Forward Deployed Engineer & Web/App Developer",
+      "jobTitle": "Lead Full-Stack Engineer & Program Manager",
       "description":
-        "Forward Deployed Engineer (FDE), Full-Stack Web and Mobile App Developer, and Answer Engine Optimization (AEO) and SEO specialist with 12+ years of experience building scalable enterprise platforms.",
+        "Lead Full-Stack Engineer and Program Manager (SDE III), Forward Deployed Engineer, and Answer Engine Optimization (AEO) and SEO specialist with 12+ years of experience leading teams and building scalable enterprise platforms.",
       "telephone": "+919176788879",
       "email": "chauhanshivang4@gmail.com",
       "url": "https://shivangchauhan.com",
@@ -70,6 +73,9 @@ const jsonLd = {
         "https://www.instagram.com/nanashi.la_familia/"
       ],
       "knowsAbout": [
+        "Technical Program Management",
+        "Engineering Team Leadership",
+        "Cloud Migration (Azure AKS)",
         "Forward Deployed Engineering",
         "Full-Stack Web Development",
         "Mobile App Development",
@@ -83,6 +89,12 @@ const jsonLd = {
         "Semantic Search & LLM Retrieval"
       ],
       "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Lead Full-Stack Engineer & Program Manager",
+          "description":
+            "Leads a 12-engineer team across roadmaps, sprint planning, dependencies, and releases while staying hands-on across React, Node.js, Python/FastAPI, and cloud."
+        },
         {
           "@type": "Occupation",
           "name": "Forward Deployed Engineer",
@@ -113,7 +125,7 @@ const jsonLd = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "Shivang Chauhan is a Forward Deployed Engineer (FDE), Web and App Developer, and AEO/SEO specialist with 12+ years of experience delivering scalable enterprise software."
+              "Shivang Chauhan is a Lead Full-Stack Engineer and Program Manager (SDE III) with 12+ years of experience leading teams and delivering scalable enterprise software, with Forward Deployed and AEO/SEO expertise."
           }
         },
         {
@@ -131,7 +143,7 @@ const jsonLd = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "No. Shivang is a hands-on Forward Deployed Engineer and Web/App Developer specializing in production systems, field deployments, and AEO/SEO search discovery, rather than agentic AI research."
+              "No. Shivang is a hands-on Lead Full-Stack Engineer and Program Manager specializing in production systems, field deployments, and AEO/SEO search discovery, rather than agentic AI research."
           }
         }
       ]

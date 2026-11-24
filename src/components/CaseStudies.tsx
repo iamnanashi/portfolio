@@ -16,9 +16,9 @@ export default function CaseStudies() {
       logo: "/companies/247ai.svg",
       whiteBg: false,
       period: "Sep 2020 – Present",
-      role: "SDE III / Tech Lead",
+      role: "SDE III / Tech Lead (Team of 12)",
       location: "Bangalore, India",
-      tagline: "Conversational Runtime Platform Leadership & Self-Serve Ad Tech",
+      tagline: "Conversational AI, Self-Serve Ad Tech & AKS Cloud Migration",
       color: "#ffff00",
       highlights: [
         {
@@ -31,6 +31,16 @@ export default function CaseStudies() {
           desc: "Guided full-stack delivery of a self-serve ad-creation and delivery engine integrated with Google DV360 and Meta Campaign APIs on a React + Node.js/MongoDB architecture.",
           tech: ["React", "Node.js", "MongoDB", "DV360 API", "Meta Marketing API"],
         },
+        {
+          title: "AI-Powered Campaign Creation (30 → 10 min)",
+          desc: "Led GenAI-assisted campaign creation for the Target Self-Serve platform, generating campaigns and audience targeting from a short prompt and cutting campaign setup from about 30 minutes to 10.",
+          tech: ["Generative AI", "React", "Node.js", "Ad Tech"],
+        },
+        {
+          title: "AKS Cloud Migration (~50% Cost Cut)",
+          desc: "Planned and drove the migration of entire product lines to Azure Kubernetes Service with Helm, Argo CD, Jenkins CI and SaltStack, secured by Azure WAF and API Gateway, cutting infrastructure cost by about 50%.",
+          tech: ["Azure AKS", "Kubernetes", "Helm", "Argo CD", "Jenkins"],
+        },
       ],
       architectureDiagram: `[Client WebSocket] <--> [Node.js Gateway] <--> [FastAPI Intent Engine] <--> [Redis State]`,
     },
@@ -40,7 +50,7 @@ export default function CaseStudies() {
       logo: "/projects/konnect_logo.png",
       whiteBg: true,
       period: "Jun 2025 – Apr 2026",
-      role: "Tech Lead (Freelance / Seoul Remote)",
+      role: "Program Manager / Full-Stack Tech Lead (Seoul Remote)",
       location: "Seoul, South Korea (Remote)",
       tagline: "AI-Powered Korea Living Platform — Cross-Platform App & 4-Service RAG",
       color: "#ffff00",

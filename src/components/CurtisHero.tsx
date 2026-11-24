@@ -161,7 +161,7 @@ export default function CurtisHero() {
           {/* Neon-Yellow Role Badge (Enlarged Designation) */}
           <div className={`mb-4 sm:mb-5 ${enter(300).className}`} style={enter(300).style}>
             <span className="inline-block px-4 sm:px-5 py-2 sm:py-2.5 rounded curtis-notch font-mono text-xs sm:text-base md:text-lg font-black uppercase tracking-wider bg-[#ffff66] text-[#050505] shadow-[0_0_24px_rgba(255,255,102,0.5)]">
-              FORWARD DEPLOYED ENGINEER // WEB &amp; APP DEV // AEO &amp; SEO
+              LEAD FULL-STACK ENGINEER // PROGRAM MANAGER // FDE
             </span>
           </div>
 

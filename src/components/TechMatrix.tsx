@@ -11,7 +11,7 @@ export default function TechMatrix() {
   const [selectedCategory, setSelectedCategory] = useState<string>("fde");
 
   const categories = [
-    { id: "fde", label: "FDE & CLIENT DELIVERY", icon: Compass },
+    { id: "fde", label: "PROGRAM & CLIENT DELIVERY", icon: Compass },
     { id: "aeo_seo", label: "AEO & TECHNICAL SEO", icon: Search },
     { id: "frontend", label: "WEB ARCHITECTURE", icon: Layout },
     { id: "mobile", label: "MOBILE (REACT NATIVE)", icon: Smartphone },
@@ -21,6 +21,8 @@ export default function TechMatrix() {
 
   const allSkills = [
     // FDE & Client Delivery
+    { name: "Program & Delivery Management", category: "fde", level: "EXPERT", note: "Roadmaps, sprint planning, dependencies & releases for a 12-engineer team", hot: true },
+    { name: "Atlassian & Collaboration Tools", category: "fde", level: "ADVANCED", note: "Fair hands-on Jira & Confluence, plus XWiki, Asana & Jenkins pipelines", hot: false },
     { name: "Field Architecture & Delivery", category: "fde", level: "EXPERT", note: "Embedding with stakeholders, enterprise 0-to-1 deployments & SLA compliance", hot: true },
     { name: "Enterprise Integrations", category: "fde", level: "EXPERT", note: "Client API gateways, mission-critical pipelines (GE, Verizon, [24]7.ai)", hot: true },
     { name: "Rapid Prototyping to Prod", category: "fde", level: "EXPERT", note: "De-risking technical requirements and turning prototypes into resilient platforms", hot: true },
@@ -58,6 +60,7 @@ export default function TechMatrix() {
     { name: "FFmpeg Media Pipeline", category: "backend", level: "ADVANCED", note: "Automated video generation with dynamic audio/video assembly", hot: true },
 
     // Platform & DevOps
+    { name: "Azure AKS, Helm & Argo CD", category: "platform", level: "ADVANCED", note: "Migrated product lines to AKS with GitOps, cutting infra cost ~50%", hot: true },
     { name: "Docker", category: "platform", level: "ADVANCED", note: "Containerized monorepo environments and reproducible production images", hot: false },
     { name: "CI/CD (Jenkins, Actions)", category: "platform", level: "ADVANCED", note: "Automated test suites, SonarQube static audits, release pipelines", hot: false },
     { name: "pnpm Monorepos", category: "platform", level: "EXPERT", note: "Workspace dependency management, shared configs, unified builds", hot: false },
